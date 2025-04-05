@@ -1,133 +1,119 @@
-/* Resetando margens e padding para garantir um layout limpo */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-/* Container que simula a tela de celular */
-.phone-container {
+  }
+  
+  /* Container que simula a tela do celular */
+  .phone-container {
+    width: 360px;
+    height: 640px;
+    background-color: #fff;
+    border-radius: 36px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 8px solid #000000; /* Aumentei a borda para 8px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 375px; /* Largura típica de smartphones */
-    height: 667px; /* Altura típica de smartphones */
-    border-radius: 36px; /* Bordas arredondadas, simulando um celular */
-    background: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
-    overflow: hidden;
-}
-
-/* Tela do celular (conteúdo dentro) */
-.phone-screen {
+  }
+  
+  /* A tela do celular */
+  .phone-screen {
+    width: 100%;
+    height: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  /* Cabeçalho do simulador */
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  /* Formulário */
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
-    overflow-y: auto;
-}
-
-h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Estilo para os campos de entrada */
-.input-group {
-    margin-bottom: 15px;
+    gap: 15px;
+  }
+  
+  /* Estilo para os grupos de inputs */
+  .input-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #fff;
-    border: 2px solid #000; /* Borda preta */
-    border-radius: 8px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Rótulos (labels) */
+  label {
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  /* Estilo dos inputs */
+  input {
     padding: 10px;
-}
-
-.input-group label {
     font-size: 16px;
-    color: #333;
-    width: 40%; /* Deixa o texto alinhado à esquerda */
-}
-
-.input-group input {
-    width: 55%; /* Deixa o campo de input alinhado à direita */
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    background-color: #fff;
-    border-radius: 4px;
-}
-
-/* Botão para Calcular */
-button {
+    border: 3px solid #cacaca; /* Aumentei a borda para 3px */
+    border-radius: 2px;
     width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  /* Estilo do botão */
+  button {
     padding: 12px;
-    background-color: #007bff; /* Cor azul para o fundo */
-    color: white; /* Cor branca para o texto */
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-/* Efeito quando o botão é sobrevoado */
-button:hover {
-    background-color: #0056b3; /* Cor azul mais escura para o fundo */
-}
-
-/* Estilos para o resultado */
-#resultado {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e9f7e9;
-    border: 2px solid #28a745;
-    border-radius: 8px;
-    width: 100%;
-}
-
-#resultado-texto p {
+    background-color: #1000f0;
+    color: white;
     font-size: 18px;
+    border: 3px solid #000000; /* Aumentei a borda para 3px no botão */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1000f0;
+  }
+  
+  /* Estilo do resultado */
+  #Seu_IMC {
+    margin-top: 20px;
+    text-align: left;  /* Alinha o conteúdo à esquerda */
+    border: 3px solid #ffffff; /* Aumentei a borda para 3px */
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%; /* Faz o bloco de resultado ocupar toda a largura disponível */
+  }
+  
+  /* Ajuste para separar o título 'Seu IMC' do valor do IMC */
+  #Seu_IMC-texto p {
+    font-size: 18px;
+    color: #000000;
+    margin: 5px 0; /* Adicionando margem para dar um espaçamento entre as linhas */
+  }
+  
+  /* Resultado do IMC */
+  #resultado-imc {
     font-weight: bold;
-    color: #333;
-    margin: 5px 0; /* Espaçamento entre as linhas */
-}
-
-/* Responsividade para telas pequenas (menos de 600px) */
-@media (max-width: 600px) {
-    .phone-container {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 1.3rem;
-    }
-
-    input, button {
-        font-size: 14px;
-    }
-}
-
-/* Responsividade para telas muito pequenas (menos de 400px) */
-@media (max-width: 400px) {
-    h1 {
-        font-size: 1.2rem;
-    }
-
-    input, button {
-        font-size: 13px;
-        padding: 8px;
-    }
-}
+    color: #000000;
+  }
+  
+  #classificacao-imc {
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  
