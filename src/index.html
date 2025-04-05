@@ -3,28 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de IMC</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Simulador de IMC</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
 
-  <div class="container">
-    <h1>Calculadora de IMC</h1>
-    <form id="imc-form">
-      <div class="input-group">
-        <label for="peso">Peso (kg):</label>
-        <input type="number" id="peso" required>
-      </div>
-      <div class="input-group">
-        <label for="altura">Altura (m):</label>
-        <input type="number" step="0.01" id="altura" required>
-      </div>
-      <button type="submit">Calcular IMC</button>
-    </form>
+  <!-- Container que imita uma tela de celular -->
+  <div class="phone-container">
+    <div class="phone-screen">
+      <h1>Simulador de IMC</h1>
 
-    <div id="resultado" class="resultado"></div>
+      <form id="imc-form">
+        <!-- Input para Peso -->
+        <div class="input-group">
+          <label for="peso">PESO (kg):</label>
+          <input type="number" id="peso" placeholder="Digite seu peso" required>
+        </div>
+
+        <!-- Input para Altura -->
+        <div class="input-group">
+          <label for="altura">Altura (m):</label>
+          <input type="number" id="altura" step="0.01" placeholder="Digite sua altura" required>
+        </div>
+
+        <!-- Botão para Calcular -->
+        <button type="submit">Calcular IMC</button>
+      </form>
+
+      <!-- Resultado exibido no formato de tela de celular -->
+      <div id="Seu IMC">
+        <div id="Seu IMC-texto">
+          <p><strong>Resultado:</strong> <span id="resultado-imc"></span></p>
+          <p><strong>Classificação:</strong> <span id="classificacao-imc"></span></p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
-</html>run
+</html>

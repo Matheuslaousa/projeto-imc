@@ -3,101 +3,131 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 10px;
-  }
-  
-  /* Container centralizado */
-  .container {
-    background-color: white;
+}
+
+/* Container que simula a tela de celular */
+.phone-container {
+    position: relative;
+    width: 375px; /* Largura típica de smartphones */
+    height: 667px; /* Altura típica de smartphones */
+    border-radius: 36px; /* Bordas arredondadas, simulando um celular */
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    overflow: hidden;
+}
+
+/* Tela do celular (conteúdo dentro) */
+.phone-screen {
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px; /* Limita a largura máxima da calculadora */
-  }
-  
-  /* Título da calculadora */
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+h1 {
     font-size: 1.5rem;
-  }
-  
-  /* Agrupamento dos campos de entrada */
-  .input-group {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo para os campos de entrada */
+.input-group {
     margin-bottom: 15px;
-  }
-  
-  /* Estilo para os campos de entrada (input) */
-  input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 12px; /* Maior espaçamento para facilitar a digitação em dispositivos móveis */
+    background-color: #fff;
+    border: 2px solid #000; /* Borda preta */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.input-group label {
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Estilo para o botão */
-  button {
+    color: #333;
+    width: 40%; /* Deixa o texto alinhado à esquerda */
+}
+
+.input-group input {
+    width: 55%; /* Deixa o campo de input alinhado à direita */
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* Botão para Calcular */
+button {
     width: 100%;
     padding: 12px;
-    background-color: #28a745;
-    color: white;
+    background-color: #007bff; /* Cor azul para o fundo */
+    color: white; /* Cor branca para o texto */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  /* Resultado do IMC */
-  .resultado {
     margin-top: 20px;
-    text-align: center;
+}
+
+/* Efeito quando o botão é sobrevoado */
+button:hover {
+    background-color: #0056b3; /* Cor azul mais escura para o fundo */
+}
+
+/* Estilos para o resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9f7e9;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    width: 100%;
+}
+
+#resultado-texto p {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-  }
-  
-  /* Responsividade para telas menores que 600px (smartphones e tablets pequenos) */
-  @media (max-width: 600px) {
-    .container {
-      padding: 15px;
-      width: 100%; /* Aumenta a largura para caber melhor na tela */
-      max-width: 100%;
+    margin: 5px 0; /* Espaçamento entre as linhas */
+}
+
+/* Responsividade para telas pequenas (menos de 600px) */
+@media (max-width: 600px) {
+    .phone-container {
+        width: 100%;
+        max-width: 100%;
     }
-  
+
     h1 {
-      font-size: 1.3rem; /* Ajusta o tamanho da fonte do título */
+        font-size: 1.3rem;
     }
-  
+
     input, button {
-      font-size: 14px; /* Ajusta o tamanho da fonte nos inputs e botão */
-      padding: 10px; /* Ajusta o espaçamento nos campos */
+        font-size: 14px;
     }
-  }
-  
-  /* Responsividade para telas ainda menores, até 400px (smartphones muito pequenos) */
-  @media (max-width: 400px) {
+}
+
+/* Responsividade para telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
     h1 {
-      font-size: 1.2rem; /* Ajusta ainda mais o título para telas menores */
+        font-size: 1.2rem;
     }
-  
+
     input, button {
-      font-size: 13px; /* Ajusta o tamanho da fonte para inputs e botões em telas muito pequenas */
-      padding: 8px; /* Menor padding para otimizar o uso de espaço */
+        font-size: 13px;
+        padding: 8px;
     }
-  }
-  
+}
