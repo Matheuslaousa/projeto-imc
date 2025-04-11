@@ -1,119 +1,115 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Container que simula a tela do celular */
-  .phone-container {
-    width: 360px;
-    height: 640px;
-    background-color: #fff;
-    border-radius: 36px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border: 8px solid #000000; /* Aumentei a borda para 8px */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  /* A tela do celular */
-  .phone-screen {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  
-  /* Cabeçalho do simulador */
-  h1 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-  }
-  
-  /* Formulário */
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  /* Estilo para os grupos de inputs */
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  /* Rótulos (labels) */
-  label {
-    font-size: 16px;
-    color: #000000;
-  }
-  
-  /* Estilo dos inputs */
-  input {
-    padding: 10px;
-    font-size: 16px;
-    border: 3px solid #cacaca; /* Aumentei a borda para 3px */
-    border-radius: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 5px;
-  }
-  
-  /* Estilo do botão */
-  button {
-    padding: 12px;
-    background-color: #1000f0;
-    color: white;
-    font-size: 18px;
-    border: 3px solid #000000; /* Aumentei a borda para 3px no botão */
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #1000f0;
-  }
-  
-  /* Estilo do resultado */
-  #Seu_IMC {
-    margin-top: 20px;
-    text-align: left;  /* Alinha o conteúdo à esquerda */
-    border: 3px solid #ffffff; /* Aumentei a borda para 3px */
-    padding: 10px;
-    border-radius: 4px;
-    width: 100%; /* Faz o bloco de resultado ocupar toda a largura disponível */
-  }
-  
-  /* Ajuste para separar o título 'Seu IMC' do valor do IMC */
-  #Seu_IMC-texto p {
-    font-size: 18px;
-    color: #000000;
-    margin: 5px 0; /* Adicionando margem para dar um espaçamento entre as linhas */
-  }
-  
-  /* Resultado do IMC */
-  #resultado-imc {
-    font-weight: bold;
-    color: #000000;
-  }
-  
-  #classificacao-imc {
-    font-weight: bold;
-    color: #000000;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container da "tela" (sem moldura de celular) */
+.phone-container {
+  width: 360px;
+  height: 640px;
+  background-color: #fff;
+  border-radius: 12px; /* Valor menor, só pra suavizar os cantos */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Mantém um leve destaque */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: none; /* Removido o contorno preto */
+}
+
+/* A tela do celular */
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Cabeçalho */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Grupo de inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 3px solid #cacaca;
+  border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+/* Botão */
+button {
+  padding: 12px;
+  background-color: #1000f0;
+  color: white;
+  font-size: 18px;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1000f0;
+}
+
+/* Resultado */
+#Seu_IMC {
+  margin-top: 20px;
+  text-align: left;
+  border: 3px solid #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Texto do resultado */
+#Seu_IMC-texto p {
+  font-size: 18px;
+  color: #000000;
+  margin: 5px 0;
+}
+
+/* Valor e classificação do IMC */
+#resultado-imc,
+#classificacao-imc {
+  font-weight: bold;
+  color: #000000;
+}
+
   
